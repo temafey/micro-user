@@ -7,7 +7,7 @@ _default:
       composer: composer
     composer-stability-check: ~
     tests-check:
-      command: ./bin/phpunitChangeEmailHandlerTest
+      command: ./bin/phpunit
   version-generator: simple
   version-persister:
     name: vcs-tag
