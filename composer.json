@@ -1,0 +1,92 @@
+{
+    "name": "temafey/micro-user",
+    "description": "Implement microservice to manage users using DDD, CQRS, Event Sourcing applications using Symfony as framework and running with php7",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "beberlei/assert": "^2.8",
+        "broadway/broadway": "^2.0",
+        "broadway/broadway-bundle": "^0.4.1",
+        "broadway/event-store-dbal": "^0.2.1",
+        "elasticsearch/elasticsearch": "^6.0",
+        "league/tactician-bundle": "^1.1",
+        "lexik/jwt-authentication-bundle": "^2.5",
+        "nelmio/api-doc-bundle": "^3.3",
+        "php-amqplib/rabbitmq-bundle": "^1.14",
+        "ramsey/uuid": "^3.7",
+        "ramsey/uuid-doctrine": "^1.4",
+        "sensio/framework-extra-bundle": "^5.1",
+        "symfony/asset": "^4.2",
+        "symfony/console": "^4.2",
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^4.2",
+        "symfony/orm-pack": "^1.0",
+        "symfony/security-bundle": "^4.2",
+        "symfony/twig-bundle": "^4.2",
+        "symfony/yaml": "^4.2"
+    },
+    "require-dev": {
+        "dama/doctrine-test-bundle": "^5.0",
+        "damianopetrungaro/php-commitizen": "^0.1.2",
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "jakub-onderka/php-console-highlighter": "^0.4",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "liip/rmt": "^1.4",
+        "phly/changelog-generator": "^2.2",
+        "phpstan/phpstan": "^0.10",
+        "phpstan/phpstan-phpunit": "^0.10",
+        "phpstan/phpstan-symfony": "^0.10",
+        "phpunit/phpunit": "^7.4",
+        "roave/security-advisories": "dev-master",
+        "sensiolabs/security-checker": "^4.0",
+        "symfony/browser-kit": "^4.2",
+        "symfony/css-selector": "^4.2",
+        "symfony/dotenv": "^4.2",
+        "symfony/phpunit-bridge": "^4.2",
+        "symfony/profiler-pack": "^1.0"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\User\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Micro\\User\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-iconv": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "id": "01C1QKYZ4DSB74RHER7JCF8Q1K",
+            "allow-contrib": false
+        }
+    }
+}

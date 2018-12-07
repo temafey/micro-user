@@ -1,0 +1,23 @@
+services:
+    _defaults:
+        public: true
+        bind:
+          $elasticConfig: '%elastic%'
+
+    Micro\User\Tests\Infrastructure\Share\Event\EventCollectorListener:
+      public: true
+      tags:
+          - { name: broadway.domain.event_listener }
+
+    events_to_elastic:
+        class: Micro\User\Infrastructure\Share\Event\Consumer\SendEventsToElasticConsumer
+        autowire: true
+
+    events_repository:
+        class: Micro\User\Infrastructure\Share\Event\Query\EventElasticRepository
+        autowire: true
+
+    Micro\User\Tests\Infrastructure\Share\Event\Publisher\InMemoryProducer: ~
+
+    old_sound_rabbit_mq.events_producer:
+      alias: 'Micro\User\Tests\Infrastructure\Share\Event\Publisher\InMemoryProducer'
