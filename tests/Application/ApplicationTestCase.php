@@ -33,11 +33,7 @@ abstract class ApplicationTestCase extends KernelTestCase
     }
 
     /**
-     * Executes the given command and optionally returns a value
-     *
-     * @param object $query
-     *
-     * @return mixed
+     * Executes the given command and optionally returns a value.
      */
     protected function ask(object $query)
     {
@@ -45,11 +41,7 @@ abstract class ApplicationTestCase extends KernelTestCase
     }
 
     /**
-     * Executes the given command and optionally returns a value
-     *
-     * @param object $command
-     *
-     * @return mixed
+     * Executes the given command and optionally returns a value.
      */
     protected function handle(object $command): void
     {
@@ -57,11 +49,7 @@ abstract class ApplicationTestCase extends KernelTestCase
     }
 
     /**
-     * Get and return service from Service Container
-     *
-     * @param string $serviceId
-     *
-     * @return object
+     * Get and return service from Service Container.
      */
     protected function service(string $serviceId)
     {
