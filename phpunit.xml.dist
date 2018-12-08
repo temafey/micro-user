@@ -26,6 +26,8 @@
         <env name="JWT_PASSPHRASE" value="development"/>
         <env name="JWT_TTL" value="604800"/>
         <!-- ###- lexik/jwt-authentication-bundle ### -->
+
+        <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak_vendors" />
     </php>
 
     <testsuites>
