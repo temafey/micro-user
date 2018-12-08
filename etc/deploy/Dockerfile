@@ -4,20 +4,19 @@ WORKDIR /app
 
 ENV APP_ENV prod
 ENV APP_SECRET default-secret
+ENV APP_DEBUG 0
 ENV RABBITMQ_URL amqp://guest:guest@rmq:5672
-
-COPY composer.json /app
-COPY composer.lock /app
-COPY symfony.lock /app
-
-RUN composer install --no-ansi --no-scripts --no-dev --no-interaction --no-progress --optimize-autoloader
 
 COPY bin /app/bin
 COPY config /app/config
 COPY src /app/src
 COPY public /app/public
+COPY var /app/var
+COPY composer.json /app
+COPY composer.lock /app
+COPY symfony.lock /app
 
-RUN composer run-script post-install-cmd && php /app/bin/console c:w
+RUN composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader && php /app/bin/console c:w
 
 FROM temafey/alpine-php:7.2
 
