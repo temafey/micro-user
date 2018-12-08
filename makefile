@@ -53,11 +53,11 @@ style: ## executes php analizers
 
 .PHONY: cs
 cs: ## executes php cs fixer
-		docker-compose run --rm php sh -lc './vendor/bin/php-cs-fixer --no-interaction --diff -v fix --path-mode=intersection /app'
+		docker-compose run --rm php sh -lc './vendor/bin/php-cs-fixer --no-interaction --diff -v fix'
 
 .PHONY: cs-check
 cs-check: ## executes php cs fixer in dry run mode
-		docker-compose run --rm php sh -lc './vendor/bin/php-cs-fixer --no-interaction --dry-run --diff -v fix --path-mode=intersection /app'
+		docker-compose run --rm php sh -lc './vendor/bin/php-cs-fixer --no-interaction --dry-run --diff -v fix'
 
 .PHONY: lint
 lint: ## checks syntax of PHP files
