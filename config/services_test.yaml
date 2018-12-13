@@ -4,7 +4,7 @@ services:
         bind:
           $elasticConfig: '%elastic%'
 
-    Micro\User\Tests\Infrastructure\Share\Event\EventCollectorListener:
+    Micro\User\Tests\Unit\Infrastructure\Share\Event\EventCollectorListener:
       public: true
       tags:
           - { name: broadway.domain.event_listener }
@@ -17,7 +17,7 @@ services:
         class: Micro\User\Infrastructure\Share\Event\Query\EventElasticRepository
         autowire: true
 
-    Micro\User\Tests\Infrastructure\Share\Event\Publisher\InMemoryProducer: ~
+    Micro\User\Tests\Unit\Infrastructure\Share\Event\Publisher\InMemoryProducer: ~
 
     old_sound_rabbit_mq.events_producer:
-      alias: 'Micro\User\Tests\Infrastructure\Share\Event\Publisher\InMemoryProducer'
+      alias: 'Micro\User\Tests\Unit\Infrastructure\Share\Event\Publisher\InMemoryProducer'

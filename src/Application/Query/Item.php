@@ -23,13 +23,13 @@ final class Item
     /** @var SerializableReadModel */
     public $readModel;
 
-    public function __construct(SerializableReadModel $serializableReadModel, array $relations = [])
+    public function __construct(SerializableReadModel $serializeReadModel, array $relations = [])
     {
-        $this->id = $serializableReadModel->getId();
-        $this->type = $this->type($serializableReadModel);
-        $this->resource = $serializableReadModel->serialize();
+        $this->id = $serializeReadModel->getId();
+        $this->type = $this->type($serializeReadModel);
+        $this->resource = $serializeReadModel->serialize();
         $this->relationships = $relations;
-        $this->readModel = $serializableReadModel;
+        $this->readModel = $serializeReadModel;
     }
 
     private function type(SerializableReadModel $model): string

@@ -24,6 +24,12 @@ services:
       - rmq
     container_name: 'micro-user-php'
 
+  php-test:
+    image: temafey/alpine-php:7.2-dev
+    volumes:
+      - .:/app
+    container_name: 'micro-user-php-test'
+
   workers:
     image: temafey/alpine-php:7.2-dev
     volumes:

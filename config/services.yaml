@@ -56,25 +56,25 @@ services:
           - 'false'
           - '@broadway.uuid.converter'
 
-    ### UI
+    ### Presentation
 
-    Micro\User\UI\Cli\Command\:
-        resource: '../src/UI/Cli/Command'
+    Micro\User\Presentation\Cli\Command\:
+        resource: '../src/Presentation/Cli/Command'
 
-    Micro\User\UI\Http\Rest\Controller\:
-        resource: '../src/UI/Http/Rest/Controller/*'
+    Micro\User\Presentation\Http\Rest\Controller\:
+        resource: '../src/Presentation/Http/Rest/Controller/*'
         tags: [ 'controller.service_arguments' ]
 
-    Micro\User\UI\Http\Web\Controller\:
-        resource: '../src/UI/Http/Web/Controller/*'
+    Micro\User\Presentation\Http\Web\Controller\:
+        resource: '../src/Presentation/Http/Web/Controller/*'
         tags: [ 'controller.service_arguments' ]
 
-    ### UI Listeners
+    ### Presentation Listeners
 
-    Micro\User\UI\Http\Rest\EventSubscriber\ExceptionSubscriber:
+    Micro\User\Presentation\Http\Rest\EventSubscriber\ExceptionSubscriber:
         tags:
             - { name: 'kernel.event_listener', event: 'kernel.exception' }
 
-    Micro\User\UI\Http\Rest\EventSubscriber\JsonBodyParserSubscriber:
+    Micro\User\Presentation\Http\Rest\EventSubscriber\JsonBodyParserSubscriber:
         tags:
             - { name: 'kernel.event_listener', event: 'kernel.request', method: 'onKernelRequest', priority: 100 }

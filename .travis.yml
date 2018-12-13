@@ -22,7 +22,7 @@ script:
   - make start
   - make cs-check
   - make style
-  - make conf="--coverage-clover build/logs/clover.xml" phpunit
+  - make phpunit conf="--coverage-clover build/logs/clover.xml"
   - make schema-validate
   - make layer
   - make artifact

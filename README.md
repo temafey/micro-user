@@ -84,3 +84,7 @@ Watch containers logs
 See all make commands
 
 `make help`
+
+Full test circle
+
+`make test`

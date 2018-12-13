@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Micro\User\Application\Command\User\SignUp;
 
 use Micro\User\Application\Command\CommandHandlerInterface;
-use Micro\User\Domain\User\Factory\UserFactory;
-use Micro\User\Domain\User\Repository\UserRepositoryInterface;
+use Micro\User\Domain\Factory\UserFactory;
+use Micro\User\Domain\Repository\UserRepositoryInterface;
 
 class SignUpHandler implements CommandHandlerInterface
 {

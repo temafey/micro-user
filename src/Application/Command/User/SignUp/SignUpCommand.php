@@ -2,9 +2,9 @@
 
 namespace Micro\User\Application\Command\User\SignUp;
 
-use Micro\User\Domain\User\ValueObject\Auth\Credentials;
-use Micro\User\Domain\User\ValueObject\Auth\HashedPassword;
-use Micro\User\Domain\User\ValueObject\Email;
+use Micro\User\Domain\ValueObject\Auth\Credentials;
+use Micro\User\Domain\ValueObject\Auth\HashedPassword;
+use Micro\User\Domain\ValueObject\Email;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 

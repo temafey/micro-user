@@ -6,8 +6,8 @@ namespace Micro\User\Application\Query\User\FindByEmail;
 
 use Micro\User\Application\Query\Item;
 use Micro\User\Application\Query\QueryHandlerInterface;
-use Micro\User\Domain\User\Query\Projections\UserViewInterface;
-use Micro\User\Domain\User\Query\Repository\UserReadModelRepositoryInterface;
+use Micro\User\Domain\Query\Projections\UserViewInterface;
+use Micro\User\Domain\Query\Repository\UserReadModelRepositoryInterface;
 
 class FindByEmailHandler implements QueryHandlerInterface
 {

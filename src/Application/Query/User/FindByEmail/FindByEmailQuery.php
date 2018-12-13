@@ -2,7 +2,7 @@
 
 namespace Micro\User\Application\Query\User\FindByEmail;
 
-use Micro\User\Domain\User\ValueObject\Email;
+use Micro\User\Domain\ValueObject\Email;
 
 class FindByEmailQuery
 {

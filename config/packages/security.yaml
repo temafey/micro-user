@@ -5,7 +5,7 @@ security:
             cost: 12
     providers:
         users:
-            id: 'Micro\User\Infrastructure\User\Auth\AuthProvider'
+            id: 'Micro\User\Infrastructure\Auth\AuthProvider'
 
     firewalls:
         dev:
@@ -34,9 +34,9 @@ security:
             provider: users
             anonymous: ~
             guard:
-              entry_point: 'Micro\User\Infrastructure\User\Auth\Guard\LoginAuthenticator'
+              entry_point: 'Micro\User\Infrastructure\Auth\Guard\LoginAuthenticator'
               authenticators:
-                - 'Micro\User\Infrastructure\User\Auth\Guard\LoginAuthenticator'
+                - 'Micro\User\Infrastructure\Auth\Guard\LoginAuthenticator'
             form_login:
               login_path: /sign-in
               check_path: sign-in

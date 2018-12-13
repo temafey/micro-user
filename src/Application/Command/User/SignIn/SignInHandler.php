@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Micro\User\Application\Command\User\SignIn;
 
 use Micro\User\Application\Command\CommandHandlerInterface;
-use Micro\User\Domain\User\Exception\InvalidCredentialsException;
-use Micro\User\Domain\User\Repository\CheckUserByEmailInterface;
-use Micro\User\Domain\User\Repository\UserRepositoryInterface;
-use Micro\User\Domain\User\ValueObject\Email;
+use Micro\User\Domain\Exception\InvalidCredentialsException;
+use Micro\User\Domain\Repository\CheckUserByEmailInterface;
+use Micro\User\Domain\Repository\UserRepositoryInterface;
+use Micro\User\Domain\ValueObject\Email;
 use Ramsey\Uuid\UuidInterface;
 
 class SignInHandler implements CommandHandlerInterface

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Micro\User\Application\Command\User\ChangeEmail;
 
 use Micro\User\Application\Command\CommandHandlerInterface;
-use Micro\User\Domain\User\Repository\UserRepositoryInterface;
+use Micro\User\Domain\Repository\UserRepositoryInterface;
 
 class ChangeEmailHandler implements CommandHandlerInterface
 {

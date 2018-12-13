@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Micro\User\Application\Command\User\SignIn;
 
-use Micro\User\Domain\User\ValueObject\Email;
+use Micro\User\Domain\ValueObject\Email;
 
 class SignInCommand
 {

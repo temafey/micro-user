@@ -1,19 +1,21 @@
 paths:
   - ./src
 exclude_files:
+
 layers:
   - name: Domain
     collectors:
       - type: className
-        regex: Micro\\User\\Domain\\.*
+        regex: .*\\Domain\\.*
   - name: Application
     collectors:
       - type: className
-        regex: Micro\\User\\Application\\.*
+        regex: .*\\Application\\.*
   - name: Infrastructure
     collectors:
       - type: className
-        regex: Micro\\User\\Infrastructure\\.*
+        regex: .*\\Infrastructure\\.*
+
 ruleset:
   Domain:
   Application:
