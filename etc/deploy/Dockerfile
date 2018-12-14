@@ -8,6 +8,7 @@ ENV APP_DEBUG 0
 ENV RABBITMQ_URL amqp://guest:guest@rmq:5672
 
 COPY bin /app/bin
+COPY bootstrap /app/bootstrap
 COPY config /app/config
 COPY src /app/src
 COPY public /app/public
